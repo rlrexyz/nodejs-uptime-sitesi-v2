@@ -75,7 +75,7 @@ app.get("/discord", (req, res) => {
 })
 
 setInterval(() => {
-    mongoose.connect("mongodb+srv://uzayarsiv:uzayarsiv@cluster0.4fajo.mongodb.net/uptime?retryWrites=true&w=majority", function (err,db) {
+    mongoose.connect("mongodb url", function (err,db) {
     var uptime = db.collection("uptimes");
     uptime.find({}).toArray(function (err, result){  
       result.forEach(site =>{
